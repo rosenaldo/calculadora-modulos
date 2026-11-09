@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#102a43">
+    <title>Calculadora de Preços | Dialoga Tech</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="wrap">
+            <div class="brand">DIALOGA TECH</div>
+            <div class="sub">CALCULADORA COMERCIAL DE MÓDULOS</div>
+        </div>
+    </header>
+    <main>
+        <section class="panel">
+            <h1>Monte o orçamento</h1>
+            <p class="hint">O plano básico já inclui Estoque, 1 PDV e emissão fiscal por R$ 99,90. Selecione somente os
+                módulos adicionais que o cliente deseja.</p>
+            <div class="base">
+                <div class="base-title">PLANO BÁSICO — INCLUSO</div>
+                <div class="base-price">R$ 99,90</div>
+                <div class="base-items">✓ Estoque<br>✓ 1 PDV (ponto de venda)<br>✓ Emissão fiscal (SAT / NFC-e / NFe)
+                </div>
+            </div>
+            <div class="toolbar">
+                <button class="secondary" id="all">Selecionar todos os adicionais</button>
+                <button class="secondary" id="clear">Limpar adicionais</button>
+            </div>
+            <input class="search" id="search" type="search" placeholder="Buscar módulo adicional..."
+                aria-label="Buscar módulo adicional">
+            <div id="modules"></div>
+        </section>
+        <section class="panel">
+            <h1>Resumo do orçamento</h1>
+            <div class="summary">
+                <div class="total-label">VALOR MENSAL PARA O CLIENTE</div>
+                <div class="total" id="total">R$ 99,90</div>
+                <div class="line"><span>Plano básico</span><strong>R$ 99,90</strong></div>
+                <div class="line"><span>Módulos adicionais</span><strong id="addons">R$ 0,00</strong></div>
+                <div class="line"><span>Adicionais selecionados</span><strong id="count">0</strong></div>
+            </div>
+            <p class="note">O valor final considera o plano básico mais os módulos adicionais selecionados. Confirme
+                condições comerciais e periodicidade antes de fechar a contratação.</p>
+            <button class="primary" id="copy">Copiar orçamento para WhatsApp</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
